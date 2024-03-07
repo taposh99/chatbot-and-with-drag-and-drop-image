@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\BotManChatController;
-
+use App\Http\Controllers\FileUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::match(['get', 'post'], '/botman-chat', 'BotManChatController@invoke');
+
+
+Route::get('upload-ui', [FileUploadController::class, 'dropzoneUi' ]);
+Route::post('file-upload', [FileUploadController::class, 'dropzoneFileUpload' ])->name('dropzoneFileUpload');
