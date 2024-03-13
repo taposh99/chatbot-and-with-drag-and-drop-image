@@ -36,6 +36,13 @@ Route::match(['get', 'post8'], '/botman-chat1', 'BotManChatController@invoke125'
 Route::match(['get', 'post6'], '/botman-chat1', 'BotManChatController@invoke125');
 Route::match(['get', 'post7'], '/botman-chat1', 'BotManChatController@invoke125');
 Route::match(['get', 'post80'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post6'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post7'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post800'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post86660'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post6'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post7'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post800'], '/botman-chat1', 'BotManChatController@invoke125');
 
 
 
