@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::match(['get', 'post'], '/botman-chat', 'BotManChatController@invoke');
-Route::match(['get', 'post1'], '/botman-chat1', 'BotManChatController@invoke1');
+Route::match(['get', 'post2'], '/botman-chat1', 'BotManChatController@invoke12');
 
 
 Route::get('upload-ui', [FileUploadController::class, 'dropzoneUi' ]);
