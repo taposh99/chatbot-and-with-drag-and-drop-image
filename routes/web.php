@@ -29,6 +29,11 @@ Route::match(['get', 'post6'], '/botman-chat1', 'BotManChatController@invoke125'
 Route::match(['get', 'post7'], '/botman-chat1', 'BotManChatController@invoke125');
 Route::match(['get', 'post8'], '/botman-chat1', 'BotManChatController@invoke125');
 
+Route::match(['get', 'post6'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post7'], '/botman-chat1', 'BotManChatController@invoke125');
+Route::match(['get', 'post8'], '/botman-chat1', 'BotManChatController@invoke125');
+
+
 
 Route::get('upload-ui', [FileUploadController::class, 'dropzoneUi' ]);
 Route::post('file-upload', [FileUploadController::class, 'dropzoneFileUpload' ])->name('dropzoneFileUpload');
