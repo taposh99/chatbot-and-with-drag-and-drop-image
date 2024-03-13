@@ -1,21 +1,20 @@
-name: Deploy to cPanel
+name: Deploy Private GitHub repository to cPanel
 on:
   push:
     branches:
-      - main  # Or your default branch
-
+      - main
 jobs:
-  deploy:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Deploy to cPanel
-      uses: appleboy/scp-action@master
+    - uses: actions/checkout@v2.1.0
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        source: "."
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
         target: "https://test.constructionaidltd.com/"
